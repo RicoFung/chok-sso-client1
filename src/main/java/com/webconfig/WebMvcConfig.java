@@ -36,8 +36,7 @@ public class WebMvcConfig implements WebMvcConfigurer
 	{
 //		 设置默认首页(必须加入“forward:”, 否则会访问spring.mvc.view.prefix所指定的目录)
 //		registry.addViewController("/").setViewName("forward:/index.jsp"); 
-        registry.addViewController("/").setViewName("html/securedPage");
-//        registry.addViewController("/").setViewName("html/index");
+        registry.addViewController("/").setViewName("html/index");
 	}
 
 	/**
