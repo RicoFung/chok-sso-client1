@@ -12,6 +12,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter
 	@Override
 	public void configure(HttpSecurity http) throws Exception
 	{
-		http.antMatcher("/**").authorizeRequests().anyRequest().authenticated();
+		http.antMatcher("/**").authorizeRequests().anyRequest().authenticated()
+		.and()
+		.logout()
+        .logoutSuccessUrl("http://localhost:9090/chok-sso/exit");
 	}
 }
