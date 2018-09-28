@@ -19,7 +19,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter
 	{
 		http.antMatcher("/**").authorizeRequests().anyRequest().authenticated()
 		.and()
-		.logout().logoutSuccessUrl(env.getProperty("auth-server.logout-uri"))
+		.logout().logoutSuccessUrl(env.getProperty("chok.oauth2.server.logout-uri"))
         .deleteCookies()
         .clearAuthentication(true)
         .invalidateHttpSession(true);
